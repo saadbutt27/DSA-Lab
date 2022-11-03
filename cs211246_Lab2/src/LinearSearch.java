@@ -1,19 +1,19 @@
 public class LinearSearch {
     // Methods for searching an elements in an array
 
-    public void linearSearch(int arr[], int key) {
+    public void linearSearch(Student arr[], String key) {
         boolean flag = false;
         for (int i=0; i<arr.length; i++) {
-            if (arr[i] == key) {
-                System.out.println("Element found on index: " + i);
+            if (arr[i].name.equalsIgnoreCase(key)) {
+                System.out.println("Name: "+ arr[i].name + " Id: " + arr[i].id);
                 flag = true;
             }
         }
         if (!flag) {
             System.out.println("Element not found!");
         }
-
     }
+
     public void sentinelLinearSearch(int arr[], int key) {
         int n = arr.length;
         int last = arr[n-1];
@@ -91,16 +91,4 @@ public class LinearSearch {
         }
     }
 
-    public int[] arrayBubbleSort (int arr[]) {
-        for (int i=0; i<arr.length-1; i++) {
-            for (int j=0; j<arr.length-i-1; j++) {
-                if (arr[j] > arr[j+1]) {
-                    int temp = arr[j];
-                    arr[j] = arr[j+1];
-                    arr[j+1] = temp;
-                }
-            }
-        }
-        return arr;
-    }
 }
