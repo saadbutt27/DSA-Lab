@@ -1,33 +1,36 @@
-import javax.sound.sampled.Line;
-import java.util.Arrays;
-import java.util.Scanner;
-
 public class Main {
 
     public static void main(String[] args) {
 
+        Recursion rec1 = new Recursion();
+        rec1.a(0);
+//        Sorting insSort = new Sorting();
+//        int arr1[] = {11,9,7,5,3,1};
+//        System.out.println("Original Array: " + Arrays.toString(arr1));
+//        System.out.println("Insertion Sort While Loop: " + Arrays.toString(insSort.insertionSort(arr1)));
+//        System.out.println("Insertion Sort For Loop: " + Arrays.toString(insSort.insertionSortForLoop(arr1)));
         // Task
-        Scanner input = new Scanner(System.in);
-        String id;
-        String name;
-        String age;
-        String email;
-        Student[] std = new Student[10];
-        for (int i=0; i<10; i++) {
-            System.out.println("Student " + (i+1));
-            System.out.print("Enter id: ");
-            id = input.nextLine();
-            System.out.print("Enter name: ");
-            name = input.nextLine();
-            System.out.print("Enter age: ");
-            age = input.nextLine();
-            System.out.print("Enter email: ");
-            email = input.nextLine();
-            std[i] = new Student(id, name, age, email);
-        }
-
-        LinearSearch search = new LinearSearch();
-        search.linearSearch(std, "Ali");
+//        Scanner input = new Scanner(System.in);
+//        String id;
+//        String name;
+//        String age;
+//        String email;
+//        Student[] std = new Student[10];
+//        for (int i=0; i<10; i++) {
+//            System.out.println("Student " + (i+1));
+//            System.out.print("Enter id: ");
+//            id = input.nextLine();
+//            System.out.print("Enter name: ");
+//            name = input.nextLine();
+//            System.out.print("Enter age: ");
+//            age = input.nextLine();
+//            System.out.print("Enter email: ");
+//            email = input.nextLine();
+//            std[i] = new Student(id, name, age, email);
+//        }
+//
+//        LinearSearch search = new LinearSearch();
+//        search.linearSearch(std, "Ali");
 
         // Sorting
 //        int arr1[] = {3,5,9,7,11};
