@@ -20,15 +20,25 @@ public class SingleLinkedList {
     public void traverseList() {
         Node temp = head;
         while (temp.next != null) {
-            System.out.println(temp.data + " " + temp.next);
+            System.out.print(temp.data + ", ");
             temp = temp.next;
+        }
+        System.out.print(temp.data);
+    }
+
+    public void traverseListReverse(Node current) {
+        if (current != null) {
+            traverseListReverse(current.next);
+            System.out.print(current.data + ", ");
         }
     }
 
     public void searchNode(int searchValue) {
         Node temp = head;
+        int count = 0;
         boolean flag = false;
         while (temp.next != null) {
+            count++;
             if (temp.data == searchValue) {
                 flag = true;
                 break;
@@ -36,7 +46,7 @@ public class SingleLinkedList {
             temp = temp.next;
         }
         if (flag) {
-            System.out.println(searchValue + " exists in the List at " + temp);
+            System.out.println(searchValue + " exists in the List at position " + count);
         } else {
             System.out.println(searchValue + " doesn't exist in List");
         }
@@ -44,8 +54,10 @@ public class SingleLinkedList {
 
     public void updateNode(int searchValue, int newValue) {
         Node temp = head;
+        int count = 0;
         boolean flag = false;
         while (temp.next != null) {
+            count++;
             if (temp.data == searchValue) {
                 temp.data = newValue;
                 flag = true;
@@ -54,27 +66,32 @@ public class SingleLinkedList {
             temp = temp.next;
         }
         if (flag) {
-            System.out.println(searchValue + " updated at " + temp + " to " + newValue);
+            System.out.println(searchValue + " updated at position " + count + " to " + newValue);
         } else {
             System.out.println(searchValue + " doesn't exist in List");
         }
     }
 
-//    public void insertNodeBefore(int d, Node n) {
-//        Node temp = head;
-//        boolean flag = false;
-//        while (temp.next != null) {
-//            if (temp.data == d) {
-//                flag = true;
-//                break;
-//            }
-//            temp = temp.next;
-//        }
-//        if (flag) {
-//            n.next = temp.next;
-//            temp.next = n;
-//        }
-//    }
+    public void insertNodeBefore(int data, Node n) {
+        if (head.data == data) {
+            n.next = head;
+            head = n;
+        } else {
+            Node temp = head;
+            boolean flag = false;
+            while (temp.next != null) {
+                if (temp.next.data == data) {
+                    flag = true;
+                    break;
+                }
+                temp = temp.next;
+            }
+            if (flag) {
+                n.next = temp.next;
+                temp.next = n;
+            }
+        }
+    }
 
     public void insertNodeAfter(int d, Node n) {
         Node temp = head;
@@ -92,30 +109,26 @@ public class SingleLinkedList {
         }
     }
 
-    public void printListReverse(Node current) {
-        if (current != null) {
-            printListReverse(current.next);
-            System.out.println(current.data + " " + current.next);
-        }
-
-    }
-
     public void deleteNode(int dataToDelete) {
         if (head.data == dataToDelete) {
             head = head.next;
         } else {
             Node current = head;
+            boolean flag = false;
             while (current.next != null) {
                 if (dataToDelete == tail.data) {
                     tail = current;
                     tail.next = null;
+                    flag  = true;
                 } else if (current.next.data == dataToDelete){
                     current.next = current.next.next;
+                    flag = true;
                     break;
                 }
                 current = current.next;
             }
+            if (!flag)
+                System.out.println("Data to be deleted does not exist in the list");
         }
     }
-    // 2 5 7 6
 }
