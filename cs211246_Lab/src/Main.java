@@ -2,8 +2,33 @@ public class Main {
 
     public static void main(String[] args) {
 
-        Recursion rec1 = new Recursion();
-        rec1.a(0);
+        SingleLinkedList list = new SingleLinkedList();
+        int count = 5;
+        for (int i=0; i<10; i++) {
+            list.insertNode(count);
+            count += 10;
+        }
+
+        list.traverseList();
+//
+//        list.searchNode(25);
+//
+//        list.updateNode(45, 50);
+//        list.traverseList();
+//
+//        Node n = new Node(30);
+//        list.insertNodeAfter(55,n);
+//        list.traverseList();
+
+//        list.printListReverse(list.head);
+
+        list.deleteNode(5);
+
+        list.traverseList();
+
+
+//        Recursion rec1 = new Recursion();
+//        rec1.a(0);
 //        Sorting insSort = new Sorting();
 //        int arr1[] = {11,9,7,5,3,1};
 //        System.out.println("Original Array: " + Arrays.toString(arr1));
