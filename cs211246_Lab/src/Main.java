@@ -1,12 +1,15 @@
+import java.util.Arrays;
+
 public class Main {
 
     public static void main(String[] args) {
 
-        Recursion rec1 = new Recursion();
-        rec1.a(0);
-//        Sorting insSort = new Sorting();
-//        int arr1[] = {11,9,7,5,3,1};
-//        System.out.println("Original Array: " + Arrays.toString(arr1));
+//        Recursion rec1 = new Recursion();
+//        rec1.a(0);
+        Sorting insSort = new Sorting();
+        int arr1[] = {1,3,5,9,7,11};
+        System.out.println("Original Array: " + Arrays.toString(arr1));
+        System.out.println("Sorted Array: " + Arrays.toString(insSort.selectionSortAscending(arr1)));
 //        System.out.println("Insertion Sort While Loop: " + Arrays.toString(insSort.insertionSort(arr1)));
 //        System.out.println("Insertion Sort For Loop: " + Arrays.toString(insSort.insertionSortForLoop(arr1)));
         // Task

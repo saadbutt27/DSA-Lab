@@ -1,10 +1,11 @@
 public class Sorting {
 
     public int[] selectionSortAscending(int arr[]) {
+        // {11,7,9,5,3,1}
         int min;
         for (int i=0; i<arr.length; i++) {
             min = i;
-            for (int j=i+1; j < arr.length; j++) {
+            for (int j=i+1; j<arr.length; j++) {
                 if (arr[min] > arr[j]) {
                     min = j;
                 }
@@ -20,7 +21,7 @@ public class Sorting {
         int max;
         for (int i=0; i<arr.length; i++) {
             max = i;
-            for (int j=i+1; j < arr.length; j++) {
+            for (int j=i+1; j<arr.length; j++) {
                 if (arr[max] < arr[j]) {
                     max = j;
                 }
