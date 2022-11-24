@@ -1,11 +1,45 @@
 public class Main {
     public static void main(String[] args) {
+        
+//        DoublyLinkedList list1 = new DoublyLinkedList();
+//        int count = 5;
+//        for (int i=0; i<10; i++) {
+//            list1.insertNode(count);
+//            count += 10;
+//        }
+//        DoublyLinkedList list2 = new DoublyLinkedList();
+//        int count2 = 6;
+//        for (int i=0; i<10; i++) {
+//            list2.insertNode(count2);
+//            count2 += 10;
+//        }
+//        list1.traverseList();
+//        list1.searchNode(85);
+//        list1.updateNode(75, 105);
+//        list1.traverseList();
+
+//        list1.traverseList();
+//        list1.insertNodeAt(72, 10);
+//        list1.traverseList();
+
+//        list1.traverseList();
+//        list2.traverseList();
+////        DoublyLinkedList li = DoublyLinkedList.combineLists(list1, list2);
+//        li.traverseList();
+//        System.out.println(li.tail.data);
+//        list1.traverseListReverse();
+
+//        list1.traverseList();
+//        list1.deleteNode(5);
+//        list1.traverseList();
+
         SingleLinkedList list = new SingleLinkedList();
         int count = 5;
         for (int i=0; i<10; i++) {
             list.insertNode(count);
             count += 10;
         }
+        
 
         System.out.println("Traversing and printing nodes in the linked list");
         list.traverseList();
