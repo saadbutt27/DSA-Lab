@@ -1,3 +1,5 @@
+import java.sql.SQLOutput;
+
 public class SingleLinkedList {
     public Node head;
     Node tail;
@@ -24,6 +26,7 @@ public class SingleLinkedList {
             temp = temp.next;
         }
         System.out.print(temp.data);
+        System.out.println();
     }
 
     public void traverseListReverse(Node current) {

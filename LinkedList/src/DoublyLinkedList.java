@@ -53,6 +53,25 @@ public class DoublyLinkedList {
         }
     }
 
+    public void twoWaySearch(int key) {
+        if (head.data == key) {
+            System.out.println("Key Found on head");
+        } else if (tail.data == key) {
+            System.out.println("Key Found on tail");
+        } else {
+            DoublyNode tempHead = head.next;
+            DoublyNode tempTail = tail.prev;
+            while(tempHead != tempTail && tempTail.next != tempHead.prev) {
+                if(tempHead.data == key || tempTail.data == key){
+                    System.out.println("Key Found in middle");
+                    break;
+                }
+                tempHead = tempHead.next;
+                tempTail = tempTail.prev;
+            }
+        }
+    }
+
     public void updateNode(int searchValue, int newValue) {
         DoublyNode temp = head;
         boolean flag = false;
@@ -73,10 +92,6 @@ public class DoublyLinkedList {
         }
     }
 
-    public void twoWaySearch() {
-
-    }
-
     public void insertNodeAt(int data, int pos) {
         DoublyNode n = new DoublyNode(data);
         if (pos == 1) {
@@ -88,53 +103,84 @@ public class DoublyLinkedList {
             DoublyNode current = head;
             boolean flag = false;
 
-            while(current.next != null) {
+            while(current != null) {
                 position++;
                 if (pos == position) {
-                    flag = true;break;
+                    flag = true;
+                    break;
                 }
                 current = current.next;
             }
             if (flag) {
                 current.prev.next = n;
+                n.prev = current.prev;
                 current.prev = n;
                 n.next = current;
             }
         }
-
     }
 
-//    public static DoublyLinkedList combineLists(DoublyLinkedList list1, DoublyLinkedList list2) {
-//        DoublyLinkedList list = list1;
-//        list.tail.next = list2.head;
-//        return list;
-//
-//    }
+    public void combineTwoLists(DoublyLinkedList list1, DoublyLinkedList list2) {
+        list1.tail.next = list2.head;
+        list2.head.prev = list1.tail;
+        list1.tail = list2.tail;
+    }
 
     public boolean deleteNode(int data) {
-        DoublyNode current = head;
         if (data == head.data) {
             head = head.next;
             head.prev = null;
             return true;
         } else if (tail.data == data) {
+//            while (current != null) {
+//                if (current.next.next == null) {
+//                    tail = current;
+//                    tail.next = null;
+//                    return true;
+//                }
+//                current = current.next;
+//            }
+            tail = tail.prev;
+            tail.next = null;
+            return true;
+        } else {
+            DoublyNode current = head.next;
             while (current != null) {
-                if (current.next.next == null) {
-                    tail = current;
-                    tail.next = null;
-                    return true;
-                }
-                current = current.next;
-            }
-        }
-        else {
-            while (current.next != null) {
                 if (current.data == data) {
                     current.next.prev = current.prev;
                     current.prev.next = current.next;
                     return true;
                 }
                 current = current.next;
+            }
+        }
+        return false;
+    }
+
+    public boolean twoWayDelete(int key){
+        if(head.data == key){
+            head = head.next;
+            head.prev = null;
+            return true;
+        } else if (tail.data == key) {
+            tail = tail.prev;
+            tail.next = null;
+            return true;
+        } else {
+            DoublyNode tempHead = head.next;
+            DoublyNode tempTail = tail.prev;
+            while(tempHead != tempTail && tempTail.next != tempHead.prev){
+                if(tempHead.data == key){
+                    tempHead.prev.next = tempHead.next;
+                    tempHead.next.prev = tempHead.prev;
+                    return true;
+                } else if(tempTail.data == key){
+                    tempTail.prev.next = tempTail.next;
+                    tempTail.next.prev = tempTail.prev;
+                    return true;
+                }
+                tempHead = tempHead.next;
+                tempTail = tempTail.prev;
             }
         }
         return false;
