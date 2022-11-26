@@ -79,8 +79,7 @@ public class LinearSearch {
                 System.out.println("Element found on index: " + mid);
                 flag = true;
                 break;
-            }
-            else if (arr[mid] < key) {
+            } else if (arr[mid] < key) {
                 start = mid+1;
             } else if (arr[mid] > key) {
                 end = mid-1;

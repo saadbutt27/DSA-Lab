@@ -52,24 +52,46 @@ public class DoublyLinkedList {
             System.out.println(searchValue + " doesn't exist in List");
         }
     }
-
-    public void twoWaySearch(int key) {
-        if (head.data == key) {
-            System.out.println("Key Found on head");
-        } else if (tail.data == key) {
-            System.out.println("Key Found on tail");
+    public boolean twoWaySearch(int key) {
+        if (key == head.data) {
+            return true;
+        } else if (key == tail.data) {
+            return true;
         } else {
-            DoublyNode tempHead = head.next;
-            DoublyNode tempTail = tail.prev;
-            while(tempHead != tempTail && tempTail.next != tempHead.prev) {
-                if(tempHead.data == key || tempTail.data == key){
-                    System.out.println("Key Found in middle");
-                    break;
+            DoublyNode currentHead = head.next;
+            DoublyNode currentTail = tail.prev;
+            while ((currentHead != currentTail) && (currentHead.prev != currentTail.next) && (currentHead.prev != currentTail))
+            {
+                if (key == currentHead.data || key == currentTail.data) {
+                    return true;
                 }
-                tempHead = tempHead.next;
-                tempTail = tempTail.prev;
+                currentHead = currentHead.next;
+                currentTail = currentTail.prev;
+            }
+            if (key == currentHead.data || key == currentTail.data) {
+                return true;
             }
         }
+        return false;
+    }
+
+    public boolean twoWaySearchU(int key) {
+        if (head.data == key) {
+            return true;
+        }
+        DoublyNode tempHead = head.next;
+        DoublyNode tempTail = tail;
+        while(tempTail.next != tempHead.prev) {
+            if(tempHead.data == key || tempTail.data == key){
+                return true;
+            }
+            tempHead = tempHead.next;
+            if (tempHead != tempTail) {
+                return false;
+            }
+            tempTail = tempTail.prev;
+        }
+        return false;
     }
 
     public void updateNode(int searchValue, int newValue) {

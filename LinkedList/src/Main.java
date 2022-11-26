@@ -1,7 +1,6 @@
 public class Main {
     public static void main(String[] args) {
-
-//        Doubly Linked List Main
+//       Doubly Linked List Main
         System.out.println("Doubly Linked List");
         DoublyLinkedList list = new DoublyLinkedList();
         int count = 5;
@@ -9,7 +8,6 @@ public class Main {
             list.insertNode(count);
             count += 10;
         }
-
         System.out.println("Traversing and printing nodes in doubly linked list");
         list.traverseList();
 
@@ -20,7 +18,12 @@ public class Main {
         list.searchNode(75);
 
         System.out.println("Searching specific node in doubly linked list through two way search");
-        list.searchNode(85);
+        int key = 55;
+        System.out.println("Key to search = " + key);
+        System.out.println(!(list.twoWaySearch(key)) ? "Not found!" : "Found");
+        key = 101;
+        System.out.println("Key to search = " + key);
+        System.out.println(!(list.twoWaySearch(key)) ? "Not found!" : "Found");
 
         System.out.println("Updating data value of a targeted node in doubly linked list");
         list.updateNode(45, 50);
@@ -37,8 +40,12 @@ public class Main {
             list2.insertNode(count2);
             count2 += 10;
         }
+        System.out.println("List 1");
+        list.traverseList();
+        System.out.println("List 2");
+        list2.traverseList();
         list.combineTwoLists(list, list2);
-        System.out.println("List after combining in next order");
+        System.out.println("Combined List");
         list.traverseList();
         System.out.println("List after combining in previous order");
         list.traverseListReverse();
