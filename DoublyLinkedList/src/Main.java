@@ -1,29 +1,5 @@
 public class Main {
     public static void main(String[] args) {
-        // BlockChain
-        BlockChain block = new BlockChain();
-        block.addBlock("Usman");
-        block.addBlock("Saad");
-        block.addBlock("Danial");
-        block.addBlock("Yasir");
-        block.addBlock("Rahim");
-
-        block.traverseBlockChain();
-
-        //Circular Linked List
-        System.out.println("Circular Doubly Linked List");
-        CircularLinkedList circularList = new CircularLinkedList();
-        circularList.insertNode(5);
-        circularList.insertNode(98);
-        circularList.insertNode(32);
-        circularList.insertNode(10);
-        circularList.insertNode(66);
-        circularList.insertNode(79);
-        circularList.insertNode(2);
-        System.out.println("Traversing and printing nodes in circular doubly linked list");
-        circularList.traverse();
-
-//       Doubly Linked List Main
         System.out.println("Doubly Linked List");
         DoublyLinkedList list = new DoublyLinkedList();
         int count = 5;
@@ -76,42 +52,6 @@ public class Main {
         System.out.println("Deleting a node from doubly linked list");
         System.out.println((list.deleteNode(80)) ? "Node Deleted" : "Node doesn't exist");
         list.traverseList();
-
-//        Singly Linked List Main
-        System.out.println("\nSingly Linked List");
-        SingleLinkedList listS = new SingleLinkedList();
-        count = 5;
-        for (int i=0; i<10; i++) {
-            listS.insertNode(count);
-            count += 10;
-        }
-
-        System.out.println("Traversing and printing nodes in the linked list");
-        listS.traverseList();
-        System.out.println("Traversing and printing nodes in the linked list in reverse order");
-        listS.traverseListReverse(listS.head);
-        System.out.println();
-
-        System.out.println("Searching specific node in the linked list");
-        listS.searchNode(25);
-
-        System.out.println("Updating data value of a targeted node in linked list");
-        listS.updateNode(45, 50);
-        listS.traverseList();
-
-        Node n1 = new Node(30);
-        System.out.println("Updating a node in the linked list after specific data");
-        listS.insertNodeAfter(55,n1);
-        listS.traverseList();
-
-        Node n2 = new Node(30);
-        System.out.println("Inserting a node in the linked list before specific data");
-        listS.insertNodeBefore(5, n2);
-        listS.traverseList();
-
-        System.out.println("Deleting a node in the linked list");
-        listS.deleteNode(65);
-        listS.traverseList();
 
     }
 }
