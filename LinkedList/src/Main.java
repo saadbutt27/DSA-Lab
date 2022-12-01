@@ -1,5 +1,6 @@
 public class Main {
     public static void main(String[] args) {
+
 //       Doubly Linked List Main
         System.out.println("Doubly Linked List");
         DoublyLinkedList list = new DoublyLinkedList();
