@@ -2,7 +2,7 @@ public class Main {
     public static void main(String[] args) {
         System.out.println("Singly Linked List");
         SingleLinkedList listS = new SingleLinkedList();
-        count = 5;
+        int count = 0;
         for (int i=0; i<10; i++) {
             listS.insertNode(count);
             count += 10;
