@@ -1,5 +1,27 @@
 public class Main {
     public static void main(String[] args) {
+                // BlockChain
+
+        BlockChain block = new BlockChain();
+        block.addBlock("Usman");
+        block.addBlock("Saad");
+        block.addBlock("Danial");
+        block.addBlock("Yasir");
+        block.addBlock("Rahim");
+
+        block.traverseBlockChain();
+
+        //Circular Linked List
+//        CircularLinkedList list = new CircularLinkedList();
+//        list.insertNode(5);
+//        list.insertNode(98);
+//        list.insertNode(32);
+//        list.insertNode(10);
+//        list.insertNode(66);
+//        list.insertNode(79);
+//        list.insertNode(2);
+//
+//        list.traverse();
 //       Doubly Linked List Main
         System.out.println("Doubly Linked List");
         DoublyLinkedList list = new DoublyLinkedList();
