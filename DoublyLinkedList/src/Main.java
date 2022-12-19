@@ -3,13 +3,25 @@ public class Main {
         System.out.println("Doubly Linked List");
         DoublyLinkedList list = new DoublyLinkedList();
         int count = 5;
-        for (int i=0; i<10; i++) {
+        for (int i = 0; i < 9; i++) {
             list.insertNode(count);
             count += 10;
         }
         System.out.println("Traversing and printing nodes in doubly linked list");
         list.traverseList();
+        list.traverseListReverse();
 
+        System.out.println();
+
+//        list.assignment();
+//        list.assignment2();
+        list.ass();
+
+        System.out.println();
+
+        list.traverseList();
+        list.traverseListReverse();
+/*
         System.out.println("Traversing and printing nodes in the doubly linked list in reverse order");
         list.traverseListReverse();
 
@@ -53,5 +65,6 @@ public class Main {
         System.out.println((list.deleteNode(80)) ? "Node Deleted" : "Node doesn't exist");
         list.traverseList();
 
+    */
     }
 }

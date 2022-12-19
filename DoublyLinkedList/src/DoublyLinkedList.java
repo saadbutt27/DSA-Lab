@@ -16,6 +16,17 @@
         }
         tail = n;
     }
+     public void insertAtFirst(int data) {
+         DoublyNode n = new DoublyNode(data);
+         if (head == null) {
+             head = n;
+             tail = n;
+         } else {
+             head.prev = n;
+             n.next = head;
+             head = n;
+         }
+     }
 
     public void traverseList() {
         DoublyNode current = head;
@@ -207,4 +218,81 @@
         }
         return false;
     }
+
+    // using another linked list
+    public void assignment() {
+        DoublyNode current = head;
+        int position = 1;
+        DoublyLinkedList li = new DoublyLinkedList();
+        while (current.next != null) {
+            if (position%2 == 0) {
+                li.insertAtFirst(current.data);
+                current.next.prev = current.prev;
+                current.prev.next = current.next;
+            }
+            current = current.next;
+            position++;
+        }
+
+        current.next = li.head;
+        li.head.prev = current;
+        tail = li.tail;
+    }
+
+    // using just a node
+     public void assignment2() {
+         DoublyNode current = tail;
+         DoublyNode move;
+         int position = 1;
+         while (current.prev != null) {
+             if (position%2 == 0) {
+                 move = current;
+                 current.next.prev = current.prev;
+                 current.prev.next = current.next;
+                 current = current.prev;
+                 tail.next = move;
+                 move.prev = tail;
+                 move.next = null;
+                 tail = tail.next;
+
+             } else {
+                 current = current.prev;
+             }
+             position++;
+         }
+     }
+
+     public void ass() {
+         DoublyNode current = head;
+         DoublyNode move;
+         DoublyNode point = null;
+         int position = 1;
+         while (current.next != null) {
+             if (position%2 == 0) {
+                 move = current;
+                 current.next.prev = current.prev;
+                 current.prev.next = current.next;
+                 current = current.next;
+                 if (position > 2) {
+                     point.prev.next = move;
+                     move.prev = point.prev;
+                     point.prev = move;
+                     move.next = point;
+                     point = point.prev;
+//                     traverseList();
+                 } else {
+                     tail.next = move;
+                     move.prev = tail;
+                     tail = tail.next;
+                     tail.next = null;
+                     point = tail;
+//                     traverseList();
+                 }
+             } else {
+                 current = current.next;
+             }
+             position++;
+         }
+
+     }
 }
