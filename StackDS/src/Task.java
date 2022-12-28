@@ -34,5 +34,22 @@ public class Task {
             return arr[top--];
         }
     }
+    
+    public char peek () {
+        if (top == -1) {
+            System.out.print("Stack is empty! ");
+            return '1';
+        } else {
+            return arr[top];
+        }
+    }
+
+    public boolean isEmpty() {
+        if (top == -1) {
+            return true;
+        } else {
+            return false;
+        }
+    }
 
 }
