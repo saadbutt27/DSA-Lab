@@ -254,7 +254,6 @@
                  move.prev = tail;
                  move.next = null;
                  tail = tail.next;
-
              } else {
                  current = current.prev;
              }
@@ -294,5 +293,61 @@
              position++;
          }
 
+     }
+
+
+     public void swapNodes(int x, int y) {
+        DoublyNode current = head;
+        DoublyNode current2 = tail;
+        boolean flag1 = false;
+        boolean flag2 = false;
+        DoublyNode temp1 = null;
+        DoublyNode temp2 = null;
+        while(current.next != null) {
+            if (current.data == x) {
+                System.out.println("here");
+                temp1 = current;
+                flag1 = true;
+                break;
+            }
+            current = current.next;
+        }
+         while(current2.prev != null) {
+             if (current2.data == y) {
+                 System.out.println("here 2");
+                 temp2 = current2;
+                 flag2 = true;
+                 break;
+             }
+             current2 = current2.prev;
+         }
+
+         if (flag1 && flag2) {
+//             current.prev.next = temp2;
+//             current.next.prev = temp2;
+//             temp2.prev = current.prev;
+//             temp2.next = current.next;
+//
+//             current2.prev.next = temp1;
+//             current2.next.prev = temp1;
+//             temp1.prev = current2.prev;
+//             temp1.next = current2.next;
+
+             temp2.prev.next = temp1;
+             temp2.next.prev = temp1;
+
+             temp1.prev.next = temp2;
+             temp1.next.prev = temp2;
+
+             DoublyNode n1 = temp2.next;
+             DoublyNode n2 = temp2.prev;
+
+             temp2.next = temp1.next;
+             temp2.prev = temp1.prev;
+
+             temp1.next = n1;
+             temp1.prev = n2;
+
+         }
      }
 }

@@ -2,11 +2,17 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="31a9e0a6-9b85-4aeb-bc99-ecf9aed52ffc" name="Changes" comment="">
+      <change beforePath="$PROJECT_DIR$/../Arrays/src/LinearSearch.java" beforeDir="false" afterPath="$PROJECT_DIR$/../Arrays/src/LinearSearch.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/out/production/DoublyLinkedList/DoublyLinkedList.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/DoublyLinkedList/DoublyLinkedList.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/out/production/DoublyLinkedList/Main.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/DoublyLinkedList/Main.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/DoublyLinkedList.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/DoublyLinkedList.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Main.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Lab Manual Files/Lab (Double Linked List).docx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../SinglyLinkedList/out/production/SinglyLinkedList/Main.class" beforeDir="false" afterPath="$PROJECT_DIR$/../SinglyLinkedList/out/production/SinglyLinkedList/Main.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../SinglyLinkedList/out/production/SinglyLinkedList/SingleLinkedList.class" beforeDir="false" afterPath="$PROJECT_DIR$/../SinglyLinkedList/out/production/SinglyLinkedList/SingleLinkedList.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../SinglyLinkedList/src/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/../SinglyLinkedList/src/Main.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../SinglyLinkedList/src/SingleLinkedList.java" beforeDir="false" afterPath="$PROJECT_DIR$/../SinglyLinkedList/src/SingleLinkedList.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -25,12 +31,13 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "RunOnceActivity.OpenProjectViewOnStart": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "last_opened_file_path": "D:/BSCS Semester 3/DSA LAB/DoublyLinkedList"
   }
-}</component>
+}]]></component>
   <component name="RunManager">
     <configuration name="Main" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="Main" />

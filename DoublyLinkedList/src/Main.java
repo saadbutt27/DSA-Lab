@@ -9,13 +9,14 @@ public class Main {
         }
         System.out.println("Traversing and printing nodes in doubly linked list");
         list.traverseList();
-        list.traverseListReverse();
-
+//        list.traverseListReverse();
+//        list.swapNodes(25, 65);
         System.out.println();
+        list.traverseList();
 
 //        list.assignment();
-//        list.assignment2();
-        list.ass();
+        list.assignment2();
+//        list.ass();
 
         System.out.println();
 

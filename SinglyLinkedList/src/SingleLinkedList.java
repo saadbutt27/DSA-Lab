@@ -1,4 +1,5 @@
 import java.sql.SQLOutput;
+import java.util.List;
 
 public class SingleLinkedList {
     public Node head;
@@ -18,6 +19,7 @@ public class SingleLinkedList {
         }
         tail = n;
     }
+
 
     public void traverseList() {
         Node temp = head;
@@ -133,5 +135,73 @@ public class SingleLinkedList {
             if (!flag)
                 System.out.println("Data to be deleted does not exist in the list");
         }
+    }
+
+    public void swapNodes(int x, int y) {
+        Node current = head;
+        Node temp1 = null;
+        Node temp2 = null;
+        if (head.data == x) {
+            temp1 = head;
+        } else {
+            while(current != null) {
+                if(current.next.data == x){
+                    temp1 = current;
+                    break;
+                }
+                current = current.next;
+            }
+        }
+
+        current = head;
+        if (head.data == y) {
+            temp2 = head;
+        } else {
+            while(current != null) {
+                if(current.next.data == y){
+                    temp2 = current;
+                    break;
+                }
+                current = current.next;
+            }
+        }
+
+        Node n1 = temp1.next;
+        Node s2 = temp2.next.next;
+
+        temp1.next = temp2.next;
+        temp1.next.next = n1.next;
+
+        temp2.next = n1;
+        n1.next = s2;
+
+    }
+    public void insertNodeAtHead(Node n) {
+        if (head == null) {
+            tail = n;
+        }
+        n.next = head;
+        head = n;
+    }
+    public void arrangeOrder() {
+        Node oddNode = head;
+        Node move;
+        SingleLinkedList evenList = new SingleLinkedList();
+
+        while (oddNode.next != null) {
+            move = oddNode.next;
+            if (oddNode.next == tail) {
+                tail = oddNode;
+                tail.next = null;
+            } else {
+                oddNode.next = oddNode.next.next;
+                oddNode = oddNode.next;
+            }
+
+            evenList.insertNodeAtHead(move);
+        }
+
+        tail.next = evenList.head;
+        tail = evenList.tail;
     }
 }

@@ -8,13 +8,15 @@ public class Main {
         st.push(8);
         st.push(10);
         st.push(7);
-        System.out.println(st.peek());
-        System.out.println(st.pop());
-        System.out.println(st.pop());
-        System.out.println(st.peek());
-        System.out.println(st.pop());
-        System.out.println(st.pop());
-        System.out.println(st.pop());
+        System.out.print(st.peek() + " ");
+        System.out.print(st.pop() + " ");
+        System.out.print(st.pop() + " ");
+        System.out.print(st.peek() + " ");
+        System.out.print(st.pop() + " ");
+        System.out.print(st.pop() + " ");
+        System.out.print(st.pop() + " ");
+
+        System.out.println();
 
         // Stack through singly linked list
         System.out.println("Stack through singly linked list");
@@ -25,13 +27,15 @@ public class Main {
         stl.push(3);
         stl.push(2);
         stl.push(1);
-        System.out.println(stl.peek());
-        System.out.println(stl.pop());
-        System.out.println(stl.pop());
-        System.out.println(stl.peek());
-        System.out.println(stl.pop());
-        System.out.println(stl.pop());
-        System.out.println(stl.pop());
+        System.out.print(stl.peek() + " ");
+        System.out.print(stl.pop() + " ");
+        System.out.print(stl.pop() + " ");
+        System.out.print(stl.peek() + " ");
+        System.out.print(stl.pop() + " ");
+        System.out.print(stl.pop() + " ");
+        System.out.print(stl.pop() + " ");
+
+        System.out.println();
 
         // Class Task
         System.out.println("Class Task");
@@ -45,12 +49,13 @@ public class Main {
         for (int i=0; i<name.length(); i++) {
             System.out.print(s.pop());
         }
-        
-                String infix = "(5+9)*(3+6)-1";
-        System.out.println(infix);
+        System.out.println();
+
+        String infix = "2^8";
+        System.out.println("Infix Expression " + infix);
         String postfix = infixToPostfix(infix);
-        System.out.println(postfix);
-        System.out.println(evaluatePostfix(postfix));
+        System.out.println("Postfix Expression " + postfix);
+        System.out.println("Evaluated Answer " + evaluatePostfix(postfix));
 
     }
     public static String infixToPostfix(String infix) {
@@ -85,45 +90,50 @@ public class Main {
     }
 
     public static int evaluatePostfix(String postfix) {
-//        int result = 0;
-        int x;
+        int result;
         int a,b;
         Stack s = new Stack(postfix.length());
 
         for (int i=0; i<postfix.length(); i++) {
             if (postfix.charAt(i) >= 48 && postfix.charAt(i) <= 57) {
-//                x = (postfix.charAt(i) - 0);
-                s.push(postfix.charAt(i) - 0);
+                s.push(postfix.charAt(i) - '0');
             } else if (postfix.charAt(i) == '+') {
                 a = s.pop();
                 b = s.pop();
-                x = b+a;
-                s.push(x);
+                result = b+a;
+                s.push(result);
             } else if (postfix.charAt(i) == '-') {
                 a = s.pop();
                 b = s.pop();
-                x = b-a;
-                s.push(x);
+                result = b-a;
+                s.push(result);
             } else if (postfix.charAt(i) == '*') {
                 a = s.pop();
                 b = s.pop();
-                x = b*a;
-                s.push(x);
+                result = b*a;
+                s.push(result);
             } else if (postfix.charAt(i) == '/') {
                 a = s.pop();
                 b = s.pop();
-                x = b/a;
-                s.push(x);
+                result = b/a;
+                s.push(result);
+            } else if (postfix.charAt(i) == '^') {
+                a = s.pop();
+                b = s.pop();
+                result = power(b,a);
+                s.push(result);
             }
-//            else if (postfix.charAt(i) == '^') {
-//                a = s.pop();
-//                b = s.pop();
-//                result += Math.pow(a,b);
-//                s.push(result);
-//            }
         }
 
         return s.pop();
+    }
+
+    public static int power(int base,int exp) {
+        int sum = 1;
+        for(int i=0; i<exp; i++) {
+            sum *= base;
+        }
+        return sum;
     }
 
     public static int precedenceCheck(char c) {
@@ -140,6 +150,5 @@ public class Main {
         return 0;
     }
 
-
-    }
 }
+

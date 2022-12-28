@@ -1,4 +1,5 @@
-public class LinearSearch {
+public class
+LinearSearch {
     // Methods for searching an elements in an array
 
     public void linearSearch(Student arr[], String key) {
