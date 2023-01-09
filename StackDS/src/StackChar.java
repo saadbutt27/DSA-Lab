@@ -1,9 +1,9 @@
-public class Task {
+public class StackChar {
     int top;
     char[] arr;
     int size;
 
-    public Task (int size) {
+    public StackChar(int size) {
         this.size = size;
         arr = new char[size];
         top = -1;

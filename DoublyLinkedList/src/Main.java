@@ -1,5 +1,8 @@
 public class Main {
     public static void main(String[] args) {
+        String str = "##abc##ds#df##";
+        System.out.println(str);
+        System.out.println(change(str));
         System.out.println("Doubly Linked List");
         DoublyLinkedList list = new DoublyLinkedList();
         int count = 5;
@@ -67,5 +70,15 @@ public class Main {
         list.traverseList();
 
     */
+    }
+
+    public static String change(String str) {
+        String newStr = "";
+        for (int i=0; i<str.length()-2; i++) {
+            if(str.charAt(i) != '#' && str.charAt(i+1) != '#') {
+                newStr += str.charAt(i);
+            }
+        }
+        return newStr;
     }
 }

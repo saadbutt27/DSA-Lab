@@ -1,15 +1,15 @@
-public class Stack {
+public class StackFloat {
     int top;
-    int[] arr;
+    float[] arr;
     int size;
 
-    public Stack (int size) {
+    public StackFloat(int size) {
         this.size = size;
         top = -1;
-        arr = new int[size];
+        arr = new float[size];
     }
 
-    public void push (int value) {
+    public void push (float value) {
         if (top == size - 1) {
             System.out.print("StackOverflow! ");
         } else {
@@ -17,7 +17,7 @@ public class Stack {
         }
     }
 
-    public int pop () {
+    public float pop () {
         if (top == -1) {
             System.out.print("StackUnderflow! ");
             return -1;
@@ -26,7 +26,7 @@ public class Stack {
         }
     }
 
-    public int peek () {
+    public float peek () {
         if (top == -1) {
             System.out.print("Stack is empty! ");
             return -1;

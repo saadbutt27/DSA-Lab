@@ -16,6 +16,7 @@
         }
         tail = n;
     }
+
      public void insertAtFirst(int data) {
          DoublyNode n = new DoublyNode(data);
          if (head == null) {
@@ -36,6 +37,7 @@
         }
         System.out.println();
     }
+
     public void traverseListReverse() {
         DoublyNode current = tail;
         while (current != null) {
@@ -63,6 +65,7 @@
             System.out.println(searchValue + " doesn't exist in List");
         }
     }
+
     public boolean twoWaySearch(int key) {
         if (key == head.data) {
             return true;
@@ -108,15 +111,15 @@
     public void updateNode(int searchValue, int newValue) {
         DoublyNode temp = head;
         boolean flag = false;
-        int position = 0;
-        while (temp.next != null) {
-            position++;
+        int position = 1;
+        while (temp != null) {
             if (temp.data == searchValue) {
                 temp.data = newValue;
                 flag = true;
                 break;
             }
             temp = temp.next;
+            position++;
         }
         if (flag) {
             System.out.println(searchValue + " updated at " + position + " to " + newValue);
@@ -226,7 +229,7 @@
         DoublyLinkedList li = new DoublyLinkedList();
         while (current.next != null) {
             if (position%2 == 0) {
-                li.insertAtFirst(current.data);
+                li.insertNodeAtFirst(current);
                 current.next.prev = current.prev;
                 current.prev.next = current.next;
             }
@@ -238,6 +241,16 @@
         li.head.prev = current;
         tail = li.tail;
     }
+
+     public void insertNodeAtFirst(DoublyNode n) {
+         if (head == null) {
+             tail = n;
+         } else {
+             head.prev = n;
+             n.next = head;
+         }
+         head = n;
+     }
 
     // using just a node
      public void assignment2() {

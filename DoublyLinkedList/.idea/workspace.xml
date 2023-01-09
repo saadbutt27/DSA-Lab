@@ -2,17 +2,17 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="31a9e0a6-9b85-4aeb-bc99-ecf9aed52ffc" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/../Arrays/src/LinearSearch.java" beforeDir="false" afterPath="$PROJECT_DIR$/../Arrays/src/LinearSearch.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/out/production/DoublyLinkedList/DoublyLinkedList.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/DoublyLinkedList/DoublyLinkedList.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/out/production/DoublyLinkedList/Main.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/DoublyLinkedList/Main.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/DoublyLinkedList.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/DoublyLinkedList.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Main.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Lab Manual Files/Lab (Double Linked List).docx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../SinglyLinkedList/out/production/SinglyLinkedList/Main.class" beforeDir="false" afterPath="$PROJECT_DIR$/../SinglyLinkedList/out/production/SinglyLinkedList/Main.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../SinglyLinkedList/out/production/SinglyLinkedList/SingleLinkedList.class" beforeDir="false" afterPath="$PROJECT_DIR$/../SinglyLinkedList/out/production/SinglyLinkedList/SingleLinkedList.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../SinglyLinkedList/src/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/../SinglyLinkedList/src/Main.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../SinglyLinkedList/src/SingleLinkedList.java" beforeDir="false" afterPath="$PROJECT_DIR$/../SinglyLinkedList/src/SingleLinkedList.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../StackDS/out/production/StackDS/Main.class" beforeDir="false" afterPath="$PROJECT_DIR$/../StackDS/out/production/StackDS/Main.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../StackDS/out/production/StackDS/Stack.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../StackDS/out/production/StackDS/Task.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../StackDS/src/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/../StackDS/src/Main.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../StackDS/src/Stack.java" beforeDir="false" afterPath="$PROJECT_DIR$/../StackDS/src/StackInt.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../StackDS/src/Task.java" beforeDir="false" afterPath="$PROJECT_DIR$/../StackDS/src/StackChar.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -35,7 +35,7 @@
   "keyToString": {
     "RunOnceActivity.OpenProjectViewOnStart": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
-    "last_opened_file_path": "D:/BSCS Semester 3/DSA LAB/DoublyLinkedList"
+    "last_opened_file_path": "D:/BSCS Semester 3/DSA Thoery/DoublyLinkedList"
   }
 }]]></component>
   <component name="RunManager">

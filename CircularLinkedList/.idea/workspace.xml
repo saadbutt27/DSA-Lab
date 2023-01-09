@@ -2,9 +2,20 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="2d25af32-739b-4235-9d56-589bc8c16aa2" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/modules.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../StackDS/src/StackFloat.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Assignments/DSA-Lab Assignment3.docx" beforeDir="false" afterPath="$PROJECT_DIR$/../Assignments/DSA-Lab Assignment3.docx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../CirculatrLinkedList/.idea/workspace.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../DoublyLinkedList/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../DoublyLinkedList/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../DoublyLinkedList/out/production/DoublyLinkedList/DoublyLinkedList.class" beforeDir="false" afterPath="$PROJECT_DIR$/../DoublyLinkedList/out/production/DoublyLinkedList/DoublyLinkedList.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../DoublyLinkedList/out/production/DoublyLinkedList/Main.class" beforeDir="false" afterPath="$PROJECT_DIR$/../DoublyLinkedList/out/production/DoublyLinkedList/Main.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../DoublyLinkedList/src/DoublyLinkedList.java" beforeDir="false" afterPath="$PROJECT_DIR$/../DoublyLinkedList/src/DoublyLinkedList.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../DoublyLinkedList/src/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/../DoublyLinkedList/src/Main.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../StackDS/out/production/StackDS/Main.class" beforeDir="false" afterPath="$PROJECT_DIR$/../StackDS/out/production/StackDS/Main.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../StackDS/out/production/StackDS/Stack.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../StackDS/out/production/StackDS/Task.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../StackDS/src/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/../StackDS/src/Main.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../StackDS/src/Stack.java" beforeDir="false" afterPath="$PROJECT_DIR$/../StackDS/src/StackInt.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../StackDS/src/Task.java" beforeDir="false" afterPath="$PROJECT_DIR$/../StackDS/src/StackChar.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -26,7 +37,8 @@
   <component name="PropertiesComponent"><![CDATA[{
   "keyToString": {
     "RunOnceActivity.OpenProjectViewOnStart": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true"
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "last_opened_file_path": "D:/BSCS Semester 3/DSA LAB/CircularLinkedList"
   }
 }]]></component>
   <component name="RunManager">
