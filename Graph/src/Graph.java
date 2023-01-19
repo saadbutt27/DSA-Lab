@@ -1,3 +1,5 @@
+import java.util.Arrays;
+
 public class Graph {
     // undirected and unweighted graph
     // make directed and unweighted graph
@@ -14,6 +16,8 @@ public class Graph {
         adjMatrix = new int[size][size];
         numOfVertices = -1;
     }
+
+
 
     public boolean addVertex(char name) {
         if (numOfVertices == VList.length-1) {
@@ -38,5 +42,14 @@ public class Graph {
         }
         adjMatrix[a][b] = 1;
         adjMatrix[b][a] = 1;
+    }
+
+    public void printEdges() {
+        for (int i=0; i<adjMatrix.length; i++) {
+            for (int j=0; j<adjMatrix.length; j++) {
+                System.out.print(adjMatrix[i][j] + " ");
+            }
+            System.out.println();
+        }
     }
 }
