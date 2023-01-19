@@ -39,5 +39,4 @@ public class Graph {
         adjMatrix[a][b] = 1;
         adjMatrix[b][a] = 1;
     }
-
 }
