@@ -65,6 +65,7 @@ public class BinarySearchTree {
             }
         }
         return false;
+
     }
 
     public Node leftMost (Node l) {
@@ -76,7 +77,8 @@ public class BinarySearchTree {
 
     public Node rightMost (Node r) {
         while (r.right != null) {
-            r = r.right;
+            r = r.right
+            ;
         }
         return r;
     }

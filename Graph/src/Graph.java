@@ -1,4 +1,7 @@
 import java.util.Arrays;
+import java.util.LinkedList;
+import java.util.Queue;
+import java.util.Stack;
 
 public class Graph {
     // undirected and unweighted graph
@@ -16,8 +19,6 @@ public class Graph {
         adjMatrix = new int[size][size];
         numOfVertices = -1;
     }
-
-
 
     public boolean addVertex(char name) {
         if (numOfVertices == VList.length-1) {
@@ -52,4 +53,64 @@ public class Graph {
             System.out.println();
         }
     }
+
+    public void BFS() {
+        Queue<Vertex> q = new LinkedList<>();
+        int index = 0;
+        q.add(VList[0]);
+        VList[0].isVisited = true;
+        while(q.size() != 0){
+            System.out.print(q.peek().name + " <--> ");
+            for(int i=0; i<VList.length; i++) {
+                if(q.peek().name == VList[i].name){
+                    index = i;
+                    break;
+                }
+            }
+            for(int i=0; i<VList.length; i++) {
+                if(adjMatrix[index][i] == 1 && !VList[i].isVisited){
+                    q.add(VList[i]);
+                    VList[i].isVisited = true;
+                }
+            }
+            q.remove();
+        }
+        for (int i=0; i<VList.length; i++) {
+            VList[i].isVisited = false;
+        }
+        System.out.println();
+    }
+
+    public void DFS() {
+        Stack<Vertex> stack = new Stack<>();
+        int index = 0;
+        stack.push(VList[0]);
+        VList[0].isVisited = true;
+        System.out.print(stack.peek().name + " <--> ");
+        while (stack.size() != 0) {
+            for (int i = 0; i < VList.length; i++) {
+                if (stack.peek().name == VList[i].name) {
+                    index = i;
+                }
+            }
+            boolean child = false;
+            for (int i = 0; i < VList.length; i++) {
+                if (adjMatrix[index][i] == 1 && !VList[i].isVisited) {
+                    stack.push(VList[i]);
+                    VList[i].isVisited = true;
+                    System.out.print(stack.peek().name + " <--> ");
+                    child = true;
+                    break;
+                }
+            }
+            if (!child) {
+                stack.pop();
+            }
+        }
+        for (int i=0; i<VList.length; i++) {
+            VList[i].isVisited = false;
+        }
+        System.out.println();
+    }
+
 }
